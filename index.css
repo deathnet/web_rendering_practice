@@ -12,8 +12,8 @@ html, body {
 header {
     width: 500px;
     float: right;
-    padding-top: 70px;
-    padding-right: 150px;
+    /* padding-top: 70px;
+    padding-right: 150px; */
     text-align: right;
 }
 
@@ -46,7 +46,7 @@ header > p {
     width: 50%;
 }
 
-section{
+section, footer{
     margin-top: 130px;
     padding: 0 5rem;
     letter-spacing: 0.1em;
@@ -164,31 +164,95 @@ img {
     width: calc(50% - 2rem);
 }
 
-.half input {
-    outline: none;
-}
-
 input[type="text"], input[type="email"], textarea {
     border-radius: 0.325rem;
     padding: 0.7rem;
     font-size: 1rem;
     border: 2px solid rgb(207, 207, 207);
-    width: 80%;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus
+{
+    border-color: aquamarine;
 }
 
 .fields {
     display: flex;
     flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-shrink: inherit;
     margin: -2rem 0 0 -2rem;
     padding: 2rem 0 0 2rem;
-    width: calc(100% + 4rem);
+    width: 100%;
+    font-size: 0.6rem;
+    box-sizing: border-box;
 }
 
-.filed {
+.half input {
+    width: 100%;
+    outline: none;
+}
+
+.field {
     width: 100%;
 }
 
 .field textarea {
     resize: none;
-    outline: none;
+    width: 100%;
+    /* font-size: 0.6rem; */
+    margin: 1rem 0 1rem 0;
+}
+
+.fields input[type="button"] {
+    cursor: pointer;
+    height: 3rem;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 0.325rem;
+    /* font-size: 0.6rem; */
+    font-weight: 500;
+    letter-spacing: 0.175em;
+    padding: 0 2rem;
+    transition-duration: 0.4s;
+}
+
+.fields input[type="button"]:hover {
+    background-color: beige;
+}
+
+.right_side footer {
+    color: rgb(224, 224, 224);
+}
+
+footer a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.left_side ul {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    padding: 0;
+    /* padding-right: 150px; */
+    box-sizing: border-box;
+}
+
+.left_side ul li {
+    margin-bottom: 2rem;
+}
+
+.right_side a:link, .right_side a:visited {
+    color: rgb(224, 224, 224);
+}
+
+.left_side footer li{
+    list-style: none;
+    color: black;
+}
+
+.left_side a:link, .left_side a:visited {
+    color: black
 }
